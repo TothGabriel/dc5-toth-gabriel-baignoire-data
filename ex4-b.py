@@ -1,9 +1,9 @@
-def factoriel_iterative(n):
-    resultat = 1
-    for i in range(2, n + 1):
-        resultat *= i
-    return resultat
+def factoriel_recursive(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factoriel_recursive(n - 1)
 
 # Test de la fonction
-print(factoriel_iterative(5))  # Devrait retourner 120
-print(factoriel_iterative(7))  # Devrait retourner 5040
+print(factoriel_recursive(5))  # Devrait retourner 120
+print(factoriel_recursive(7))  # Devrait retourner 5040
